@@ -23,16 +23,16 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore tenisu/tenisu.csproj
+      run: dotnet restore ./tenisu.csproj
       
     - name: Build
-      run: dotnet build tenisu/tenisu.csproj --configuration Release --no-restore
+      run: dotnet build ./tenisu.csproj --configuration Release --no-restore
       
     - name: Test
       run: dotnet test --no-build --verbosity normal
       
     - name: Publish
-      run: dotnet publish tenisu/tenisu.csproj --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+      run: dotnet publish ./tenisu.csproj --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
 
     - name: Deployment
       uses: azure/webapps-deploy@v2
