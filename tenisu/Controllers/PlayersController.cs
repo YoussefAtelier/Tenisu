@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using tenisu.Application.Contracts;
 using tenisu.Domain.Entities;
+
+namespace tenisu.Api.controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -35,9 +36,9 @@ public class PlayersController : ControllerBase
         var result = await _service.GetStatistics();
         return Ok(new
         {
-            bestCountry = result.BestWinRatioCountry,
-            averageBmi = result.AverageBMI,
-            heightMedian = result.MedianHeight
+            BestWinRatioCountry = result.BestWinRatioCountry,
+            AverageBMI = result.AverageBMI,
+            MedianHeight = result.MedianHeight
         });
     }
 }

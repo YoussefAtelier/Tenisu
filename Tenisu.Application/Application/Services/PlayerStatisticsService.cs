@@ -1,6 +1,7 @@
 ﻿using tenisu.Application.Contracts;
 using tenisu.Domain.DTO;
 using tenisu.Domain.Entities;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace tenisu.Application.Services
 {
@@ -19,7 +20,7 @@ namespace tenisu.Application.Services
                 .OrderByDescending(x => x.Ratio)
                 .FirstOrDefault();
 
-            var avgBmi = players.Average(p => p.CalculateBMI());
+            var avgBmi = players.Average(p => p.Data.Height == 0 ? 0 : Math.Round((p.Data.Weight / 1000) / Math.Pow(p.Data.Height / 100.0, 2), 2));
 
             var heights = players.Select(p => p.Data.Height).OrderBy(h => h).ToList();
             double medianHeight = heights.Count % 2 == 0

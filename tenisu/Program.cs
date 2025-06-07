@@ -1,8 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using System;
 using tenisu.Application.Contracts;
 using tenisu.Application.Services;
-using tenisu.Domain;
 using tenisu.Domain.Factory;
 using tenisu.Infrastructure;
 using tenisu.Infrastructure.PlayerRepo;
