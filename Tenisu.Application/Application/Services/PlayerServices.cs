@@ -28,7 +28,7 @@ namespace tenisu.Application.Services
             try
             {
                 var result =  await _repository.GetAllAsync();
-                return result.OrderByDescending(x => x.WinRatio());
+                return result.OrderByDescending(x => x.WinRatio()).ToList();
 
             }
             catch (Exception ex)

@@ -13,17 +13,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 // DATABASE
-builder.Services.AddSingleton<IDbConnectionFactory, DbConnectionFactory>();
+builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
 // REPO
-builder.Services.AddSingleton<IPlayerRepository, PlayerRepository>();
+builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 
 // Services
 builder.Services
-    .AddSingleton<IPlayerFactory, PlayerFactory>()
-    .AddSingleton<IPlayersServices, PlayerServices>()
-    .AddSingleton<IPlayerFactory, PlayerFactory>()
-    .AddSingleton<IPlayerStatisticsService, PlayerStatisticsService>();
+    .AddScoped<IPlayerFactory, PlayerFactory>()
+    .AddScoped<IPlayersServices, PlayerServices>()
+    .AddScoped<IPlayerFactory, PlayerFactory>()
+    .AddScoped<IPlayerStatisticsService, PlayerStatisticsService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
