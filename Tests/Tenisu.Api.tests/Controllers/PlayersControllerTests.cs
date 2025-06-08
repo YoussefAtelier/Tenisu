@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NUnit.Framework;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using tenisu.Api.controllers;
 using tenisu.Application.Contracts;
 using tenisu.Domain.DTO;

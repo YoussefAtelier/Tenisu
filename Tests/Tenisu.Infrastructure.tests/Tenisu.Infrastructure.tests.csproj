@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tenisu.Infrastructure\Tenisu.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Tenisu.Infrastructure\Tenisu.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

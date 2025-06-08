@@ -1,21 +1,19 @@
 ﻿using Dapper;
+using Microsoft.Extensions.Logging;
 using Moq;
 using Moq.Dapper;
-using NUnit.Framework;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using tenisu.Domain.Entities;
 using tenisu.Infrastructure;
 using tenisu.Infrastructure.DTO;
 using tenisu.Infrastructure.PlayerRepo;
+using Tenisu.Infrastructure.Infrastructure.Exceptions;
 
 [TestFixture]
 public class PlayerRepositoryTests
 {
     private Mock<IDbConnection> _mockConnection;
     private Mock<IDbConnectionFactory> _mockFactory;
+    private Mock<ILogger<PlayerRepository>> _mockLogger;
     private PlayerRepository _repository;
 
     [SetUp]
@@ -24,7 +22,9 @@ public class PlayerRepositoryTests
         _mockConnection = new Mock<IDbConnection>();
         _mockFactory = new Mock<IDbConnectionFactory>();
         _mockFactory.Setup(f => f.CreateConnection()).Returns(_mockConnection.Object);
-        _repository = new PlayerRepository(_mockFactory.Object);
+        _mockLogger = new Mock<ILogger<PlayerRepository>>();
+        _repository = new PlayerRepository(_mockFactory.Object, _mockLogger.Object);
+
     }
 
     [Test]

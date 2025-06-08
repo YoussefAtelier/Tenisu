@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tenisu.Api", "tenisu\tenisu.Api.csproj", "{4288C011-8062-4C92-B017-E721F39D43F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Api", "Tenisu.Api\Tenisu.Api.csproj", "{4288C011-8062-4C92-B017-E721F39D43F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Domain", "Tenisu.Domain\Tenisu.Domain.csproj", "{6E56D91C-839F-497F-AEF4-C2D0C79A169E}"
 EndProject
@@ -13,13 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Infrastructure", "Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tenisu.Api.tests", "tenisu.test\tenisu.Api.tests.csproj", "{41E206A1-118C-4393-AEDA-3E229A40664C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Api.tests", "Tests\Tenisu.Api.tests\Tenisu.Api.tests.csproj", "{41E206A1-118C-4393-AEDA-3E229A40664C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Application.tests", "Tenisu.Application.tests\Tenisu.Application.tests.csproj", "{6BBA5760-2140-47F0-AFDB-6E4DA8AFFC1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Application.tests", "Tests\Tenisu.Application.tests\Tenisu.Application.tests.csproj", "{6BBA5760-2140-47F0-AFDB-6E4DA8AFFC1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Domain.tests", "Tenisu.Domain.tests\Tenisu.Domain.tests.csproj", "{7F895941-07FA-4791-A9E9-4ED5BE4A1B07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Domain.tests", "Tests\Tenisu.Domain.tests\Tenisu.Domain.tests.csproj", "{7F895941-07FA-4791-A9E9-4ED5BE4A1B07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Infrastructure.tests", "Tenisu.Infrastructure.tests\Tenisu.Infrastructure.tests.csproj", "{11068C72-1606-4CBC-A138-998A5424868D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu.Infrastructure.tests", "Tests\Tenisu.Infrastructure.tests\Tenisu.Infrastructure.tests.csproj", "{11068C72-1606-4CBC-A138-998A5424868D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

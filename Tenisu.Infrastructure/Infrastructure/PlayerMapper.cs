@@ -27,7 +27,7 @@ namespace tenisu.Infrastructure
             );
 
             return new Player(
-                id: dbPlayer.Player_Id, // Or if `int` ID exists, use that
+                id: dbPlayer.Player_Id,
                 firstName: dbPlayer.Firstname,
                 lastName: dbPlayer.Lastname,
                 shortName: dbPlayer.Shortname,
